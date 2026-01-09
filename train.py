@@ -16,8 +16,11 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 data = pd.read_csv(DATASET_PATH, sep=";")
 
-X = data.drop("quality", axis=1)
+corr = data.corr()["quality"].abs()
+selected_features = corr[corr > 0.1].index
+X = data[selected_features].drop("quality", axis=1)
 y = data["quality"]
+
 
 MODEL_TYPE = "linear"
 USE_SCALER = False
