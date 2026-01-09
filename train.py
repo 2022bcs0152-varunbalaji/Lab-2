@@ -16,10 +16,10 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 data = pd.read_csv(DATASET_PATH, sep=";")
 
-corr = data.corr()["quality"].abs()
-selected_features = corr[corr > 0.1].index
-X = data[selected_features].drop("quality", axis=1)
+selected_features = ["alcohol", "sulphates", "volatile acidity"]
+X = data[selected_features]
 y = data["quality"]
+
 
 
 MODEL_TYPE = "rf"
