@@ -24,7 +24,7 @@ y = data["quality"]
 
 MODEL_TYPE = "rf"
 USE_SCALER = False
-TEST_SIZE = 0.2
+TEST_SIZE = 0.3
 
 
 
