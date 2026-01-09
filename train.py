@@ -20,7 +20,7 @@ X = data.drop("quality", axis=1)
 y = data["quality"]
 
 MODEL_TYPE = "linear"
-USE_SCALER = True
+USE_SCALER = False
 TEST_SIZE = 0.2
 
 
