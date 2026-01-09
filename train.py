@@ -22,9 +22,10 @@ X = data[selected_features].drop("quality", axis=1)
 y = data["quality"]
 
 
+USE_SCALER = True
+TEST_SIZE = 0.3
 MODEL_TYPE = "linear"
-USE_SCALER = False
-TEST_SIZE = 0.2
+
 
 
 if USE_SCALER:
