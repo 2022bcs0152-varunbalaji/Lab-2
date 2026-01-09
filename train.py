@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
-DATASET_PATH = "dataset/winequality-red.csv"
+DATASET_PATH = "dataset/winequality-white.csv"
 OUTPUT_DIR = "outputs"
 
 print("Loading dataset from:", DATASET_PATH)
